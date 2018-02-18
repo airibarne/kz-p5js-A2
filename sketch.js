@@ -1,4 +1,3 @@
-// Falta un for, una shape function, un color con alpha (fill())
 function setup() {
 	/* Make the jitter stoppable pressing spacebar */
 	/* Here we use jQuery so we need to src it in the html*/
@@ -10,7 +9,7 @@ function setup() {
     		else jit = 0;
 		}
 	})
-	createCanvas(windowWidth, windowHeight);
+	createCanvas(windowWidth, windowHeight-5);
 	/*ang=0;*/
 }
 
@@ -20,13 +19,13 @@ function draw() {
 	startX = windowWidth/2;
 	startY = windowHeight/2;
 	/* Set the size of the pattern and the step between circles */
-	var maxRadius = 300;
-	var step = 25;
+	maxRadius = 300;
+	step = 25;
 	/*ang+=.01
 	if(ang>2*PI) ang=0;*/
 	k = 0;
 	size = 15;
-	var caca = [];
+	caca = [];
 	for(radius = step; radius <= maxRadius; radius+=step) {
 		k += 1;
 		size -= 1;
